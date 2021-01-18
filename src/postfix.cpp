@@ -26,19 +26,20 @@ std::string infix2postfix(std::string infix) {
       if (oper.isEmpty()) {
         oper.push(infix[i]);
       } else {
-        if (infix[i] == '('){
+        if (infix[i] == '(') {
           oper.push(infix[i]);
           continue;
         }
         if (infix[i] == ')') {
-          while(oper.get() != '(') {
+          while (oper.get() != '(') {
             postfix += oper.pop();
             postfix += ' ';
           }
           oper.pop();
           continue;
         }
-        while (!(oper.isEmpty()) && priority[oper.get()] >= priority[infix[i]]) {
+        while (!(oper.isEmpty()) &&
+               priority[oper.get()] >= priority[infix[i]]) {
           postfix += oper.pop();
           postfix += ' ';
         }
