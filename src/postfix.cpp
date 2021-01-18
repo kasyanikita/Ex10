@@ -1,8 +1,8 @@
 // Copyright 2021 Kasyanov
-#include "../include/postfix.h"
-#include "../include/MyStack.h"
 #include <map>
 #include <set>
+#include "../include/postfix.h"
+#include "../include/MyStack.h"
 
 std::string infix2postfix(std::string infix) {
   std::string postfix;
